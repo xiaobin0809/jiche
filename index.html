@@ -99,7 +99,7 @@ function renderRank(data){
         div.className = "card";
         div.innerHTML =
             '<div class="avatar"><img src="' + m.avatarThumb + '" alt="' + m.nickname + '"></div>' +
-            '<div class="name">' + m.nickname + '<span class="level ' + getLevelClass(m.fansClubLevel) + '">Lv.' + m.fansClubLevel + '</span></div>' +
+            '<div class="name">' + m.nickname + '<span class="level ' + getLevelClass(m.fansClubLevel) + '">' + m.fansClubLevel + '</span></div>' +
             '<div class="small-muted">亲密: ' + formatNumber(m.intimacy) + '</div>';
         top3Container.appendChild(div);
     });
@@ -115,7 +115,7 @@ function renderRank(data){
             '<div class="info">' +
               '<div class="info-left">' +
                 '<span class="name">' + m.nickname + '</span>' +
-                '<span class="level ' + getLevelClass(m.fansClubLevel) + '">Lv.' + m.fansClubLevel + '</span>' +
+                '<span class="level ' + getLevelClass(m.fansClubLevel) + '">' + m.fansClubLevel + '</span>' +
               '</div>' +
               '<div class="info-right">亲密: ' + formatNumber(m.intimacy) + '</div>' +
             '</div>';
