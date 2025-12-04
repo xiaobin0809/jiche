@@ -139,7 +139,7 @@ function animate(){
 
     // 前屏平滑弧度循环
     frontObjs.forEach(obj=>{
-        obj.position.x -= FRONT_SPEED;
+        obj.position.x -= FRONT_SPEED * 1.2;
         if(obj.position.x < -FRONT_SPACING){
             obj.position.x += VISIBLE_COUNT * FRONT_SPACING;
             obj.dataIndex = (obj.dataIndex + VISIBLE_COUNT) % data.length;
