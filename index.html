@@ -52,8 +52,8 @@ const CARD_WIDTH=50, CARD_HEIGHT=55, CARDS_PER_FRONT=55;
 const CYLINDER_RADIUS=700, CYLINDER_LAYER_HEIGHT=70;
 const FRONT_RADIUS=1900, FRONT_ANGLE_STEP=0.55, VISIBLE_COUNT=20;
 const FRONT_SPACING = 220;
-const FRONT_SPEED = 1;
-const ROT_SPEED=0.001, FADE_DIST=150;
+const FRONT_SPEED = 0.7;
+const ROT_SPEED=0.0005, FADE_DIST=150;
 
 const sceneCyl = new THREE.Scene();
 const sceneFront = new THREE.Scene();
@@ -139,7 +139,7 @@ function animate(){
 
     // 前屏平滑弧度循环
     frontObjs.forEach(obj=>{
-        obj.position.x -= FRONT_SPEED * 1.2;
+        obj.position.x -= FRONT_SPEED;
         if(obj.position.x < -FRONT_SPACING){
             obj.position.x += VISIBLE_COUNT * FRONT_SPACING;
             obj.dataIndex = (obj.dataIndex + VISIBLE_COUNT) % data.length;
